@@ -1,11 +1,13 @@
 $(document).ready(function() {
   $("#form1").submit(function(event) {
-    var numbers = ["number1", "number2"];
+    var countTo = parseInt($("input#number2").val());
+    var countBy =  parseInt($("input#number1").val());
+    var total = 0
+      for (var number = 0; number <= countTo; number += countBy) {
+        total += number;
 
-      for (var number = 0; number <= "#number2"; number += "#number1") {
-      alert(("<li>") + count + ("</li>"));
     }
-
+    alert(("<li>") + total + ("</li>"));
   event.preventDefault();
   });
 });
